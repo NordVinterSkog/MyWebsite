@@ -66,7 +66,7 @@ body {
       position: relative;
       top: 0;
       background-color: black;
-      button {
+      .up {
         position: sticky;
         top: 0;
         left: 85vw;
@@ -82,6 +82,7 @@ body {
         letter-spacing: 3px;
         transition: 0.4s;
         z-index: 1;
+        border: 2px solid white;
       }
       button:hover {
         letter-spacing: 0;
@@ -89,18 +90,45 @@ body {
       }
 
       .blog {
-        height: 50vh;
+        height: 70vh;
         background-color: burlywood;
         position: relative;
         top: 0;
+        margin: 15vh 0;
+        display: flex;
+        text-align: center;
+        flex-direction: row-reverse;
+
+        font-size: 1.5vh;
+
+        .article {
+          width: 30vw;
+          margin: 2vh 4vw;
+          h1 {
+            padding: 3vh;
+          }
+          .image {
+            height: 25vh;
+            border: 2px solid black;
+            background-image: url(img/me.jpg);
+          }
+          p {
+            font-size: 2.5vh;
+          }
+          a {
+            font-size: 5vh;
+          }
+        }
       }
       .projects {
         height: 50vh;
         background-color: blue;
+        margin: 15vh 0;
       }
       .contact {
         height: 45vh;
         background-color: green;
+        margin: 15vh 0;
       }
     }
   }

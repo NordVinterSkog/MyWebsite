@@ -6,7 +6,6 @@ class Bar extends Component {
   render() {
     return (
       <div className="bar">
-        <button>Home</button>
         <button>About me</button>
         <button>Blog</button>
         <button>Projects</button>
