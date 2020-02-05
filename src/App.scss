@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+
+  .wrapper {
+    width: 100vw;
+    .bar {
+      position: fixed;
+      z-index: 3;
+      top: 0;
+      left: 0;
+      height: 10vh;
+      background-color: black;
+      width: 100vw;
+      color: white;
+    }
+    .page {
+      margin-top: 10vh;
+      .header {
+        height: 90vh;
+        background-color: pink;
+        position: relative;
+        top: 0;
+        left: 0;
+      }
+      .aboutme {
+        height: 80vh;
+        position: absolute;
+        top: 5vh;
+        background-color: green;
+        width: 90vw;
+        left: 10vw;
+      }
+      .blog {
+        height: 45vh;
+        background-color: burlywood;
+      }
+      .projects {
+        height: 45vh;
+        background-color: blue;
+      }
+      .contact {
+        height: 45vh;
+        background-color: green;
+      }
+    }
+  }
+}
