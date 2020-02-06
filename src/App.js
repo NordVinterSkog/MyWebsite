@@ -5,9 +5,18 @@ import Blog from "./Blog";
 import Projects from "./Projects";
 import Contact from "./Contact";
 import "./App.css";
+import ScrollIntoView from "react-scroll-into-view";
 
 class App extends Component {
-  state = {};
+  state = {
+    scroll: 0
+  };
+
+  scrollWindow = () => {
+    console.log(window.scrollX);
+    window.scrollTo(0, 0);
+  };
+
   render() {
     return (
       <div className="wrapper">
@@ -15,10 +24,13 @@ class App extends Component {
 
         <Bar />
         <div className="page">
-          <button className="up">GO UP</button>
+          <button onClick={this.scrollWindow} className="up">
+            <i class="fas fa-arrow-up"></i>
+          </button>
           <Blog />
           <Projects />
           <Contact />
+          <footer id="footer"></footer>
         </div>
       </div>
     );

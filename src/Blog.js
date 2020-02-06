@@ -1,13 +1,11 @@
 import React, { Component } from "react";
-import me from "./img/me.jpg";
 
 class Blog extends Component {
   state = {
     articles: [
       {
         id: "0",
-        title: "Top 10 concerts of the last decade",
-        image: { me },
+        title: "Bands you need to see live.",
         text:
           "Last ten years saw a lot of changes in my perception of music. I've listened to a ton of records, attented too many shows to count",
         shortText: ""
@@ -15,7 +13,6 @@ class Blog extends Component {
       {
         id: "1",
         title: "The thing about winter.",
-        image: { me },
         text:
           "Isn't it ironic that the things which make us feel uncomfortable turn out to do the best for us in a longrun? That's one of the reasons, I think, I've grown to become madly in love with winter",
         shortText: ""
@@ -23,7 +20,6 @@ class Blog extends Component {
       {
         id: "2",
         title: "Pagan basis of Tolkien's works.",
-        image: { me },
         text:
           "I guess it's pretty safe to assume that most of my generation had at least heard about Lord of the Rings, it also wouldn't be exaggeration that millions of people of all ages are obssessed by the works of J.R.R. Tolkien.",
         shortText: ""
@@ -49,15 +45,37 @@ class Blog extends Component {
     console.log(shortTexts);
     let previews = articles.map(article => (
       <div className="article">
-        <h1>{article.title}</h1>
-        <div className="image" style={{ backgroundImage: article.image }}></div>
+        <div className="image">
+          <h1 className="title">
+            {article.title}
+            <h1>Click to read.</h1>
+          </h1>
+          <a href={`/blog/archive/${article.id}`}>
+            {" "}
+            <img
+              alt={article.title}
+              src={require(`./img/articles/${article.id}.jpg`)}
+            />
+          </a>
+        </div>
+
         <p>"{shortTexts[article.id]}..."</p>
       </div>
     ));
 
     return (
       <>
-        <div className="blog">{previews} </div>
+        <div className="blog" id="blog">
+          <div className="overlay">
+            <h1 className="title">blog - newest entries</h1>
+            <div className="articles">{previews}</div>{" "}
+            <h1 className="title">
+              <a href="/blog/archive" className="archive">
+                archive
+              </a>
+            </h1>
+          </div>
+        </div>
       </>
     );
   }

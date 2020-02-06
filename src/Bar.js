@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ScrollIntoView from "react-scroll-into-view";
 
 class Bar extends Component {
   state = {};
@@ -6,10 +7,15 @@ class Bar extends Component {
   render() {
     return (
       <div className="bar">
-        <button>About me</button>
-        <button>Blog</button>
-        <button>Projects</button>
-        <button>Contact</button>
+        <ScrollIntoView selector="#blog" className="scrollButton">
+          <p>blog</p>
+        </ScrollIntoView>
+        <ScrollIntoView selector="#projects">
+          <p>projects</p>
+        </ScrollIntoView>
+        <ScrollIntoView selector="#contact">
+          <p>about me</p>
+        </ScrollIntoView>
       </div>
     );
   }
