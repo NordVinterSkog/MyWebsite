@@ -14,7 +14,12 @@ const Contact = () => {
       <div className="contactme">
         <h1>Contact me!</h1>
         <div className="links">
-          </div>
+          <a href="https://github.com/NordVinterSkog">
+            <i class="fab fa-github"></i>
+          </a>
+          <a href="mailto:kamilj_95@wp.pl">
+            <i class="fas fa-at"></i>
+          </a>
         </div>
       </div>
     </div>

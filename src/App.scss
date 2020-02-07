@@ -5,13 +5,13 @@ html {
   width: 100vw;
   margin: 0;
   padding: 0;
+  width: 100vw;
 }
 body {
   box-sizing: border-box;
   overflow: hidden;
   font-family: "Noto Serif", serif;
   .wrapper {
-    width: 100vw;
     .header {
       height: 85vh;
       // background-color: pink;
@@ -88,6 +88,8 @@ body {
         border: 4px solid white;
       }
 
+      //BLOG
+
       .blog {
         height: 100vh;
         background-image: url(img/blog.jpg);
@@ -95,10 +97,64 @@ body {
         color: white;
         text-align: center;
         font-size: 1.5vh;
+        position: relative;
+
+        .blogRoute {
+          position: absolute;
+          left: -100vh;
+          top: 0;
+          height: 100vh;
+        }
+
+        .singleArticle {
+          width: 100vw;
+          h1 {
+            text-align: left;
+            padding: 2vh;
+            font-size: 4vh;
+          }
+          p {
+            font-size: 3vh;
+            text-align: left;
+            padding: 2vh;
+          }
+        }
         .overlay {
           background: rgba(0, 0, 0, 0.9);
           height: 100%;
         }
+        a {
+          text-decoration: none;
+          color: #888;
+          font-size: 4vh;
+        }
+        .articlesArchive {
+          padding: 5vh;
+          text-align: left;
+          font-size: 4vh;
+          .article a {
+            color: #888;
+            transition: 0.3s;
+          }
+          .article:hover a {
+            color: white;
+          }
+        }
+
+        .back {
+          position: absolute;
+          font-size: 7vh;
+          top: 80%;
+          left: 3vw;
+          letter-spacing: 3px;
+          animation: pulse 5s infinite linear;
+          transition: 0.3s;
+        }
+        .back:hover {
+          color: white;
+          letter-spacing: 0;
+        }
+
         .title {
           animation: pulse 5s infinite linear;
           font-size: 7vh;
@@ -143,7 +199,7 @@ body {
                 }
               }
               a {
-                font-size: 0;
+                margin: 0;
               }
               img {
                 height: 100%;
@@ -171,16 +227,28 @@ body {
           }
         }
         .archive {
-          color: white;
+          color: #888;
           text-decoration: none;
           transition: 0.3s;
           padding: 3vh;
+          animation: pulse 5s infinite linear;
+          font-size: 7vh;
+          text-align: left;
+          padding: 4vh;
+          margin: 0;
+          letter-spacing: 3px;
+          position: absolute;
+          top: 75%;
+          left: 0;
         }
         .archive:hover {
-          color: olivedrab;
+          color: white;
           letter-spacing: 0;
         }
       }
+
+      //PROJECTS
+
       .projects {
         height: 100vh;
         background-image: url(img/coding.jpg);
@@ -204,6 +272,7 @@ body {
           display: flex;
           flex-direction: row;
           .project {
+            flex: 1 0 auto;
             width: 30vw;
             margin: 2vh 2vw;
             // background-color: red;
@@ -273,9 +342,12 @@ body {
           letter-spacing: 0;
         }
       }
+
+      //CONTACT
+
       .contact {
         height: 100vh;
-        background-color: green;
+        background-color: black;
         margin: 15vh 0;
         .aboutme {
           height: 40%;
@@ -297,6 +369,7 @@ body {
           }
         }
         .contactme {
+          height: 60%;
           h1 {
             text-align: center;
             font-size: 7vh;
@@ -304,12 +377,25 @@ body {
           }
           .links {
             display: flex;
-            height: 25%;
-            width: 40vw;
-            background-color: red;
+            height: 50%;
+            width: 50vw;
+            // background-color: red;
             left: 50vw;
             transform: translate(-50%, -5%);
             position: relative;
+          }
+          a {
+            width: 50%;
+            padding: 5% 0;
+            font-size: 20vh;
+            text-align: center;
+            line-height: 100%;
+            color: #888;
+
+            transition: 0.3s;
+          }
+          a:hover {
+            color: white;
           }
         }
       }
