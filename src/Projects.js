@@ -24,7 +24,8 @@ class Project extends Component {
         <div className="image">
           <h1 className="title">
             {project.title}
-            <h1>Click to try out.</h1>
+
+            <i class="fab fa-github"></i>
           </h1>
           <a href={project.link}>
             {" "}

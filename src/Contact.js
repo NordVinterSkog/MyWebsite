@@ -6,9 +6,24 @@ const Contact = () => {
       <div className="aboutme">
         <img src={require(`./img/me.jpg`)} alt="" />
         <div>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Perspiciatis
-          ullam minima placeat exercitationem. Sint hic cumque molestias, dicta
-          animi architecto laudantium officia e
+          <p>Howdy.</p>
+          <p>
+            I'm a beginner front end developer from Poland. I studied and
+            gratuated journalism, but then I realized it's not exactly the kind
+            of life I want for myself, so I turned to self-learning programming
+            in JavaScript and React, though I still enjoy writing stuff from
+            time to time.{" "}
+          </p>
+          <p>
+            Other than that I'm interested in languages. I'm fluent in Polish
+            and English, had a brief affair with Norwegian, currently learning
+            and in love with Icelandic.
+          </p>
+          <p>
+            {" "}
+            I love hiking, cooking, learning cool stuff and finding coziness
+            where it's least expected.
+          </p>
         </div>
       </div>
       <div className="contactme">

@@ -7,7 +7,7 @@ const BlogArticle = props => {
   return (
     <div className="singleArticle">
       <h1>"{article.title}"</h1>
-      <p>{article.text}</p>{" "}
+      <textarea disabled>{article.text}</textarea>{" "}
       <Link className="back" to="/">
         back
       </Link>

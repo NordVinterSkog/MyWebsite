@@ -24,9 +24,12 @@ class App extends Component {
 
         <Bar />
         <div className="page">
-          <button onClick={this.scrollWindow} className="up">
-            <i class="fas fa-arrow-up"></i>
+          <button className="up">
+            <ScrollIntoView selector="#header">
+              <i class="fas fa-arrow-up"></i>
+            </ScrollIntoView>
           </button>
+
           <Blog />
           <Projects />
           <Contact />

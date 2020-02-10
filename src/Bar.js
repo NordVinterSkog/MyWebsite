@@ -10,10 +10,10 @@ class Bar extends Component {
         <ScrollIntoView selector="#blog" className="scrollButton">
           <p>blog</p>
         </ScrollIntoView>
-        <ScrollIntoView selector="#projects">
+        <ScrollIntoView selector="#projects" className="scrollButton">
           <p>projects</p>
         </ScrollIntoView>
-        <ScrollIntoView selector="#contact">
+        <ScrollIntoView selector="#contact" className="scrollButton">
           <p>about me</p>
         </ScrollIntoView>
       </div>
