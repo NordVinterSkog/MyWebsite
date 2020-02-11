@@ -13,9 +13,11 @@ class App extends Component {
   };
 
   changeArrow = () => {
+    console.log(this.state.arrowActive);
     this.setState({
       arrowActive: !this.state.arrowActive
     });
+    console.log(this.state.arrowActive);
   };
 
   lightningAnimation = () => {};
@@ -27,11 +29,13 @@ class App extends Component {
 
         <Bar />
         <div className="page">
-          <button className="up">
-            <ScrollIntoView selector="#header">
-              <i class="fas fa-arrow-up"></i>
-            </ScrollIntoView>
-          </button>
+          {this.state.arrowActive ? (
+            <button className="up">
+              <ScrollIntoView selector="#header">
+                <i className="fas fa-arrow-up"> </i>
+              </ScrollIntoView>
+            </button>
+          ) : null}
 
           <Blog changeArrow={this.changeArrow} />
           <Projects />

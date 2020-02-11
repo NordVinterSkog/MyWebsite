@@ -12,20 +12,20 @@ class Project extends Component {
       {
         id: 1,
         title: "Metronome",
-        description: "Enough said.",
-        link: "#"
+        description: "My first React project.",
+        link: "https://nordvinterskog.github.io/Metronome/"
       }
     ]
   };
   render() {
     let projects = this.state.projects;
     let previews = projects.map(project => (
-      <div className="project">
+      <div className="project" key={project.id}>
         <div className="image">
           <h1 className="title">
             {project.title}
 
-            <i class="fab fa-github"></i>
+            <i className="fab fa-github"></i>
           </h1>
           <a href={project.link}>
             {" "}

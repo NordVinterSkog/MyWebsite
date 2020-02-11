@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BlogArticle = props => {
   let article = props.article;
@@ -10,10 +10,10 @@ const BlogArticle = props => {
       style={{ backgroundImage: `url(img/articles/2.jpg)` }}
     >
       <h1>"{article.title}"</h1>
-      <textarea disabled>{article.text}</textarea>{" "}
-      <Link className="back" to="/">
-        <button className="up">
-          <i class="fas fa-arrow-up"></i>
+      <div className="textarea">{article.text}</div>
+      <Link className="back" to="/" onClick={props.changeArrow}>
+        <button onClick={props.changeArrow} className="up">
+          <i className="fas fa-arrow-up"></i>
         </button>
       </Link>
     </div>

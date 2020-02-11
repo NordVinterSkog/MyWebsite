@@ -79,7 +79,7 @@ body {
         cursor: pointer;
         transition: 0.3s;
         z-index: 2;
-        animation: arrowpulse 2s infinite linear;
+        animation: arrowpulse 2s infinite linear, arrowflip 0.3s reverse;
       }
       button:hover {
         color: white;
@@ -92,6 +92,7 @@ body {
       .blog {
         height: 100vh;
         background-image: url(img/blog.jpg);
+        background-attachment: fixed;
         margin: 15vh 0;
         color: white;
         text-align: center;
@@ -114,9 +115,12 @@ body {
             padding: 2vh;
             font-size: 4vh;
           }
-          textarea {
+          .textarea {
             width: 90%;
-            background-color: transparent;
+            background-color: rgba(0, 0, 0, 0.3);
+            padding: 10vh;
+            margin: 0 auto;
+            overflow: auto;
             color: white;
             border: none;
             font-family: inherit;
@@ -204,7 +208,7 @@ body {
                 text-align: center;
                 padding: 1vw;
                 transition: 0.1s;
-                h1 {
+                p {
                   font-size: 0;
                   transition: 0.1s;
                   text-transform: uppercase;
@@ -228,7 +232,7 @@ body {
               }
               h1 {
                 font-size: 0;
-                h1 {
+                p {
                   font-size: 9vh;
                 }
               }
@@ -264,6 +268,7 @@ body {
       .projects {
         height: 100vh;
         background-image: url(img/coding.jpg);
+        background-attachment: fixed;
         margin: 15vh 0;
         color: white;
         text-align: center;
@@ -360,6 +365,7 @@ body {
         // background-color: black;
         margin: 15vh 0;
         background-image: url(img/aboutme.jpg);
+        background-attachment: fixed;
         .overlay {
           background: rgba(0, 0, 0, 0.9);
           height: 100%;
