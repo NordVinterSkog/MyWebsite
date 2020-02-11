@@ -6,11 +6,10 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import "./App.css";
 import ScrollIntoView from "react-scroll-into-view";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
-  state = {
-    arrowActive: true
-  };
+  state = {};
 
   changeArrow = () => {
     this.setState({
@@ -27,12 +26,13 @@ class App extends Component {
 
         <Bar />
         <div className="page">
-          <button className="up">
-            <ScrollIntoView selector="#header">
-              <i class="fas fa-arrow-up"></i>
-            </ScrollIntoView>
-          </button>
-
+          {window.location.pathname === "/" ? (
+            <button className="up">
+              <ScrollIntoView selector="#header">
+                <i class="fas fa-arrow-up active"></i>
+              </ScrollIntoView>
+            </button>
+          ) : null}
           <Blog changeArrow={this.changeArrow} />
           <Projects />
           <Contact />

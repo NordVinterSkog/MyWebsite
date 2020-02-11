@@ -5,7 +5,6 @@ const Contact = () => {
     <div id="contact" className="contact">
       <div className="overlay">
         <div className="aboutme">
-          <img src={require(`./img/me.jpg`)} alt="" />
           <div>
             <p>Howdy.</p>
             <p>
@@ -28,7 +27,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contactme">
-          <h1>Contact me!</h1>
+          <img src={require(`./img/me.jpg`)} alt="" />
           <div className="links">
             <a href="https://github.com/NordVinterSkog">
               <i class="fab fa-github"></i>

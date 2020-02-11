@@ -12,8 +12,8 @@ class Project extends Component {
       {
         id: 1,
         title: "Metronome",
-        description: "Enough said.",
-        link: "#"
+        description: "My first project in React.",
+        link: "https://nordvinterskog.github.io/Metronome/"
       }
     ]
   };

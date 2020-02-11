@@ -5,7 +5,12 @@ const BlogNewEntries = props => {
   let articles = props.articles;
   let shortTexts = [];
   for (let i = 0; i < articles.length; i++) {
-    let shortText = articles[i].text.slice(0, 150);
+    console.log(articles[i].text);
+    console.log(articles[i].text.props.children[0].props.children);
+    let shortText = articles[i].text.props.children[0].props.children.slice(
+      0,
+      150
+    );
     shortText = shortText.slice(
       0,
       Math.min(shortText.length, shortText.lastIndexOf(" "))
