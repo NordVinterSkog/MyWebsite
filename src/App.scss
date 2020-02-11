@@ -73,7 +73,6 @@ body {
         font-size: 5vh;
         border: 5px solid #888;
         background-color: black;
-
         color: #888;
         height: 10vh;
         width: 10vh;
@@ -109,6 +108,7 @@ body {
         .singleArticle {
           width: 100vw;
           min-height: 100vh;
+          background-image: url(img/articles/0.jpg);
           h1 {
             text-align: left;
             padding: 2vh;
@@ -118,13 +118,14 @@ body {
             width: 90%;
             background-color: transparent;
             color: white;
-            border: 2px solid white;
+            border: none;
             font-family: inherit;
             height: 60vh;
             font-size: 3.5vh;
             letter-spacing: 1px;
             text-align: left;
             padding: 2vh;
+            animation: appear 1s;
           }
         }
         .overlay {
@@ -143,6 +144,7 @@ body {
           .article a {
             color: #888;
             transition: 0.3s;
+            animation: appear 1s;
           }
           .article:hover a {
             color: white;
@@ -151,12 +153,14 @@ body {
 
         .back {
           position: absolute;
-          font-size: 7vh;
-          top: 80%;
-          left: 3vw;
-          letter-spacing: 3px;
-          animation: pulse 5s infinite linear;
+          top: 80vh;
+          left: 90vw;
           transition: 0.3s;
+          .up {
+            transform: rotate(270deg);
+            animation: none;
+            animation: arrowflip 0.3s;
+          }
         }
         .back:hover {
           color: white;
@@ -324,8 +328,6 @@ body {
             }
             .image:hover {
               img {
-                height: 120%;
-                width: 120%;
                 opacity: 0.4;
               }
               h1 {
@@ -355,11 +357,16 @@ body {
 
       .contact {
         height: 100vh;
-        background-color: black;
+        // background-color: black;
         margin: 15vh 0;
+        background-image: url(img/aboutme.jpg);
+        .overlay {
+          background: rgba(0, 0, 0, 0.9);
+          height: 100%;
+        }
         .aboutme {
           height: 50%;
-          background-color: black;
+          // background-color: black;
           position: relative;
           padding: 5vh 10vw;
           img {
@@ -377,10 +384,9 @@ body {
           }
         }
         .contactme {
-          height: 20%;
           h1 {
             text-align: center;
-            font-size:5vh;
+            font-size: 5vh;
             color: white;
           }
           .links {
@@ -438,5 +444,23 @@ body {
   }
   100% {
     font-size: 5vh;
+  }
+}
+
+@keyframes arrowflip {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(270deg);
+  }
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
   }
 }

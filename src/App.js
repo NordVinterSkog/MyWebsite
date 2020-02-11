@@ -9,13 +9,16 @@ import ScrollIntoView from "react-scroll-into-view";
 
 class App extends Component {
   state = {
-    scroll: 0
+    arrowActive: true
   };
 
-  scrollWindow = () => {
-    console.log(window.scrollX);
-    window.scrollTo(0, 0);
+  changeArrow = () => {
+    this.setState({
+      arrowActive: !this.state.arrowActive
+    });
   };
+
+  lightningAnimation = () => {};
 
   render() {
     return (
@@ -30,7 +33,7 @@ class App extends Component {
             </ScrollIntoView>
           </button>
 
-          <Blog />
+          <Blog changeArrow={this.changeArrow} />
           <Projects />
           <Contact />
           <footer id="footer"></footer>
