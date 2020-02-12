@@ -14,7 +14,7 @@ body {
   .wrapper {
     .header {
       height: 85vh;
-      // background-color: pink;
+      opacity: 1;
       position: relative;
       top: 0;
       left: 0;
@@ -23,6 +23,11 @@ body {
       background-size: cover;
       overflow: hidden;
       text-align: center;
+      .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        height: 100%;
+        animation: thunder 3s infinite;
+      }
       h1 {
         position: absolute;
         top: 70vh;
@@ -54,6 +59,8 @@ body {
           cursor: pointer;
           letter-spacing: 3px;
           text-align: center;
+          opacity: 1;
+          animation: appear 5s;
         }
         p:hover {
           letter-spacing: 0;
@@ -360,12 +367,10 @@ body {
 
       .contact {
         height: 100vh;
-        // background-color: black;
         margin: 15vh 0;
         background-image: url(img/aboutme.jpg);
         background-attachment: fixed;
         position: relative;
-        // display: flex;
         .overlay {
           background: rgba(0, 0, 0, 0.9);
           height: 100%;
@@ -376,7 +381,7 @@ body {
           position: absolute;
 
           div {
-            font-size: 3vh;
+            font-size: 3.5vh;
             margin-left: 25vw;
             color: white;
           }
@@ -384,7 +389,6 @@ body {
         .contactme {
           width: 30vw;
           height: 100vh;
-          // background-color: red;
           position: relative;
           img {
             position: absolute;
@@ -468,5 +472,29 @@ body {
   }
   100% {
     opacity: 1;
+  }
+}
+
+@keyframes thunder {
+  0% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  44% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  45% {
+    background: rgba(0, 0, 0, 0);
+  }
+  46% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  47% {
+    background: rgba(0, 0, 0, 0);
+  }
+  51% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+  100% {
+    background: rgba(0, 0, 0, 0.9);
   }
 }

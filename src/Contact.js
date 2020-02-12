@@ -17,11 +17,11 @@ const Contact = () => {
             <p>
               Other than that I'm interested in languages. I'm fluent in Polish
               and English, had a brief affair with Norwegian, currently learning
-              and in love with Icelandic.
+              and in love with Icelandic, curious about Finnish.
             </p>
             <p>
               {" "}
-              I love hiking, cooking, learning cool stuff and finding coziness
+              I love hiking, cooking, learning new things and finding coziness
               where it's least expected.
             </p>
           </div>
