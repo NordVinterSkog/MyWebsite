@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/MyWebsite/static/css/main.f25c539b.chunk.css",
+    "main.js": "/MyWebsite/static/js/main.1dd0389e.chunk.js",
+    "main.js.map": "/MyWebsite/static/js/main.1dd0389e.chunk.js.map",
+    "runtime-main.js": "/MyWebsite/static/js/runtime-main.0e113a3f.js",
+    "runtime-main.js.map": "/MyWebsite/static/js/runtime-main.0e113a3f.js.map",
+    "static/js/2.8aa234f5.chunk.js": "/MyWebsite/static/js/2.8aa234f5.chunk.js",
+    "static/js/2.8aa234f5.chunk.js.map": "/MyWebsite/static/js/2.8aa234f5.chunk.js.map",
+    "index.html": "/MyWebsite/index.html",
+    "precache-manifest.5e60c4a5519e49c7f10bce1800995628.js": "/MyWebsite/precache-manifest.5e60c4a5519e49c7f10bce1800995628.js",
+    "service-worker.js": "/MyWebsite/service-worker.js",
+    "static/css/main.f25c539b.chunk.css.map": "/MyWebsite/static/css/main.f25c539b.chunk.css.map",
+    "static/js/2.8aa234f5.chunk.js.LICENSE.txt": "/MyWebsite/static/js/2.8aa234f5.chunk.js.LICENSE.txt",
+    "static/media/App.css": "/MyWebsite/static/media/skog.ab448df5.jpg",
+    "static/media/0.jpg": "/MyWebsite/static/media/0.b544f76c.jpg",
+    "static/media/1.jpg": "/MyWebsite/static/media/1.f3c3ca80.jpg",
+    "static/media/2.jpg": "/MyWebsite/static/media/2.50cf2dc0.jpg",
+    "static/media/me.jpg": "/MyWebsite/static/media/me.d5f5fbba.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.0e113a3f.js",
+    "static/js/2.8aa234f5.chunk.js",
+    "static/css/main.f25c539b.chunk.css",
+    "static/js/main.1dd0389e.chunk.js"
+  ]
+}
