@@ -12,11 +12,7 @@ class Project extends Component {
       {
         id: 1,
         title: "Metronome",
-<<<<<<< HEAD:src/Projects.js
-        description: "My first React project.",
-=======
         description: "My first project in React.",
->>>>>>> tmp:src/components/Projects.js
         link: "https://nordvinterskog.github.io/Metronome/"
       }
     ]

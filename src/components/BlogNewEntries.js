@@ -5,11 +5,8 @@ const BlogNewEntries = props => {
   let articles = props.articles;
   let shortTexts = [];
   for (let i = 0; i < articles.length; i++) {
-<<<<<<< HEAD:src/BlogNewEntries.js
-=======
     console.log(articles[i].text);
     console.log(articles[i].text.props.children[0].props.children);
->>>>>>> tmp:src/components/BlogNewEntries.js
     let shortText = articles[i].text.props.children[0].props.children.slice(
       0,
       150
