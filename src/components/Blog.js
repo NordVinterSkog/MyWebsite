@@ -1,27 +1,12 @@
 import React, { Component } from "react";
 import BlogArchive from "./BlogArchive.js";
 import BlogNewEntries from "./BlogNewEntries.js";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import BlogArticle from "./BlogArticle.js";
 
 class Blog extends Component {
   state = {
-    articles: [
-      {
-        id: "0",
-        title: "Bands you need to see live.",
-        text: (
-          <div>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-          </div>
-        ),
-        date: "07/02/2020"
-      }
-    ]
+    articles: []
   };
 
   componentDidMount() {}
@@ -32,15 +17,16 @@ class Blog extends Component {
         <Router>
           <div className="blog" id="blog">
             <div className="overlay">
+              <h1>Nothing to see here yet. </h1>
               <Route
                 exact
-                path="/"
+                path="/MyWebsite/"
                 component={() => (
                   <BlogNewEntries articles={this.state.articles} />
                 )}
               />
               <Route
-                path="/blog/article/:id"
+                path="/MyWebsite/blog/article/:id"
                 component={params => (
                   <BlogArticle
                     article={this.state.articles[params.match.params.id]}
@@ -49,7 +35,7 @@ class Blog extends Component {
               />
 
               <Route
-                path="/blog/archive"
+                path="/MyWebsite/blog/archive"
                 component={() => <BlogArchive articles={this.state.articles} />}
               />
             </div>

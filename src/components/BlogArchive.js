@@ -15,7 +15,7 @@ const BlogArchive = props => {
       <h1 className="title">blog - archive</h1>
       <div className="articlesArchive">{archive}</div>
       <Link className="back" to="/">
-        <button onClick={props.changeArrow} className="up">
+        <button className="up">
           <i className="fas fa-arrow-up"></i>
         </button>
       </Link>

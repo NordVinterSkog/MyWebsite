@@ -44,7 +44,7 @@ const BlogNewEntries = props => {
     <div>
       <h1 className="title">blog - newest entries</h1>
       <div className="articles">{previews}</div>
-      <Link to="/blog/archive" className="archive" onClick={props.changeArrow}>
+      <Link to="/blog/archive" className="archive">
         archive
       </Link>
     </div>

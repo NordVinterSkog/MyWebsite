@@ -10,16 +10,6 @@ import ScrollIntoView from "react-scroll-into-view";
 class App extends Component {
   state = {};
 
-  changeArrow = () => {
-    console.log(this.state.arrowActive);
-    this.setState({
-      arrowActive: !this.state.arrowActive
-    });
-    console.log(this.state.arrowActive);
-  };
-
-  lightningAnimation = () => {};
-
   render() {
     return (
       <div className="wrapper">
@@ -27,14 +17,12 @@ class App extends Component {
 
         <Bar />
         <div className="page">
-          {window.location.pathname === "/" ? (
-            <button className="up">
-              <ScrollIntoView selector="#header">
-                <i class="fas fa-arrow-up active"></i>
-              </ScrollIntoView>
-            </button>
-          ) : null}
-          <Blog changeArrow={this.changeArrow} />
+          <button className="up">
+            <ScrollIntoView selector="#header">
+              <i class="fas fa-arrow-up active"></i>
+            </ScrollIntoView>
+          </button>
+          <Blog />
           <Projects />
           <Contact />
           <footer id="footer"></footer>
