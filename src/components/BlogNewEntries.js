@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const BlogNewEntries = props => {
   let articles = props.articles;
@@ -32,7 +32,7 @@ const BlogNewEntries = props => {
         >
           <img
             alt={article.title}
-            src={require(`./img/articles/${article.id}.jpg`)}
+            src={require(`../img/articles/${article.id}.jpg`)}
           />
         </Link>
       </div>

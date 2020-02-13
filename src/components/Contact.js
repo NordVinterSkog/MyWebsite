@@ -27,7 +27,7 @@ const Contact = () => {
           </div>
         </div>
         <div className="contactme">
-          <img src={require(`./img/me.jpg`)} alt="" />
+          <img src={require(`../img/me.jpg`)} alt="" />
           <div className="links">
             <a href="https://github.com/NordVinterSkog">
               <i class="fab fa-github"></i>

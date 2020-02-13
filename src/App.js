@@ -1,9 +1,9 @@
 import React, { Component } from "react";
-import Bar from "./Bar";
-import Header from "./Header";
-import Blog from "./Blog";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Bar from "./components/Bar";
+import Header from "./components/Header";
+import Blog from "./components/Blog";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import "./App.css";
 import ScrollIntoView from "react-scroll-into-view";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";

@@ -20,35 +20,6 @@ class Blog extends Component {
           </div>
         ),
         date: "07/02/2020"
-      },
-      {
-        id: "1",
-        title: "The thing about winter.",
-        text: (
-          <div>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-          </div>
-        ),
-        date: "07/02/2020"
-      },
-      {
-        id: "2",
-        title: "Pagan basis of Tolkien's works.",
-        text: (
-          <div>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-            <p>just checking stuff out</p>
-          </div>
-        ),
-
-        date: "07/02/2020"
       }
     ]
   };

@@ -31,7 +31,7 @@ class Project extends Component {
             {" "}
             <img
               alt={project.title}
-              src={require(`./img/projects/${project.id}.jpg`)}
+              src={require(`../img/projects/${project.id}.jpg`)}
             />
           </a>
         </div>
