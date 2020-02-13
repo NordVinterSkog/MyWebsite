@@ -6,7 +6,6 @@ import Projects from "./components/Projects";
 import Contact from "./components/Contact";
 import "./App.css";
 import ScrollIntoView from "react-scroll-into-view";
-import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class App extends Component {
   state = {};
