@@ -10,10 +10,17 @@ const BlogArticle = props => {
       style={{ backgroundImage: `url(img/articles/2.jpg)` }}
     >
       <h1>"{article.title}"</h1>
+<<<<<<< HEAD:src/BlogArticle.js
       <div className="textarea">{article.text}</div>
       <Link className="back" to="/" onClick={props.changeArrow}>
         <button onClick={props.changeArrow} className="up">
           <i className="fas fa-arrow-up"></i>
+=======
+      <div className="textarea">{article.text}</div>{" "}
+      <Link className="back" to="/">
+        <button className="up">
+          <i class="fas fa-arrow-up"></i>
+>>>>>>> tmp:src/components/BlogArticle.js
         </button>
       </Link>
     </div>

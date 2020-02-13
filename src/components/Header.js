@@ -3,7 +3,7 @@ import React from "react";
 const Header = () => {
   return (
     <div className="header" id="header">
-      <div></div>
+      <div className="overlay"></div>
     </div>
   );
 };

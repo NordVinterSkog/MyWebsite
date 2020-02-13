@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import Bar from "./Bar";
-import Header from "./Header";
-import Blog from "./Blog";
-import Projects from "./Projects";
-import Contact from "./Contact";
+import Bar from "./components/Bar";
+import Header from "./components/Header";
+import Blog from "./components/Blog";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import "./App.css";
 import ScrollIntoView from "react-scroll-into-view";
 
 class App extends Component {
-  state = {
-    arrowActive: true
-  };
+  state = {};
 
   changeArrow = () => {
     console.log(this.state.arrowActive);
@@ -29,14 +27,13 @@ class App extends Component {
 
         <Bar />
         <div className="page">
-          {this.state.arrowActive ? (
+          {window.location.pathname === "/" ? (
             <button className="up">
               <ScrollIntoView selector="#header">
-                <i className="fas fa-arrow-up"> </i>
+                <i class="fas fa-arrow-up active"></i>
               </ScrollIntoView>
             </button>
           ) : null}
-
           <Blog changeArrow={this.changeArrow} />
           <Projects />
           <Contact />

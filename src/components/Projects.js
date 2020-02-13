@@ -12,7 +12,11 @@ class Project extends Component {
       {
         id: 1,
         title: "Metronome",
+<<<<<<< HEAD:src/Projects.js
         description: "My first React project.",
+=======
+        description: "My first project in React.",
+>>>>>>> tmp:src/components/Projects.js
         link: "https://nordvinterskog.github.io/Metronome/"
       }
     ]
@@ -31,7 +35,7 @@ class Project extends Component {
             {" "}
             <img
               alt={project.title}
-              src={require(`./img/projects/${project.id}.jpg`)}
+              src={require(`../img/projects/${project.id}.jpg`)}
             />
           </a>
         </div>
