@@ -28,7 +28,7 @@ const BlogNewEntries = props => {
         <Link
           id={article.id}
           onClick={props.changeArrow}
-          to={`/blog/article/${article.id}`}
+          to={`/MyWebsite/blog/article/${article.id}`}
           className="article"
         >
           <img
@@ -44,7 +44,7 @@ const BlogNewEntries = props => {
     <div>
       <h1 className="title">blog - newest entries</h1>
       <div className="articles">{previews}</div>
-      <Link to="/blog/archive" className="archive">
+      <Link to="/MyWebsite/blog/archive" className="archive">
         archive
       </Link>
     </div>

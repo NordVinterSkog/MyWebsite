@@ -11,7 +11,7 @@ const BlogArticle = props => {
     >
       <h1>"{article.title}"</h1>
       <div className="textarea">{article.text}</div>{" "}
-      <Link className="back" to="/">
+      <Link className="back" to="/MyWebsite">
         <button className="up">
           <i class="fas fa-arrow-up"></i>
         </button>
