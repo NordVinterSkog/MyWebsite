@@ -6,7 +6,7 @@ class Project extends Component {
       {
         id: 0,
         title: "FlagChallenge",
-        description: "Simple API based flag quiz game.",
+        description: "A flag quiz game.",
         link: "https://nordvinterskog.github.io/FlagChallenge/"
       },
       {
@@ -14,6 +14,12 @@ class Project extends Component {
         title: "Metronome",
         description: "My first project in React.",
         link: "https://nordvinterskog.github.io/Metronome/"
+      },
+      {
+        id: 2,
+        title: "WeatherApp",
+        description: "Simple weather app based on three APIs.",
+        link: "https://nordvinterskog.github.io/WeatherApp/"
       }
     ]
   };
