@@ -11,12 +11,6 @@ class Project extends Component {
       },
       {
         id: 1,
-        title: "Metronome",
-        description: "My first project in React.",
-        link: "https://nordvinterskog.github.io/Metronome/"
-      },
-      {
-        id: 2,
         title: "WeatherApp",
         description: "Simple weather app based on three APIs.",
         link: "https://nordvinterskog.github.io/WeatherApp/"
