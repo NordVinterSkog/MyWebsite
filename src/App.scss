@@ -294,6 +294,7 @@ body {
         .previews {
           display: flex;
           flex-direction: row;
+          overflow: auto;
           .project {
             flex: 1 0 auto;
             width: 30vw;
@@ -688,11 +689,16 @@ body {
               width: 80vw;
               margin: 2vh auto;
               // background-color: red;
-
+              p {
+                font-size: 0;
+              }
               .image {
                 margin: 0 auto;
-                height: 20vh;
+                height: 15vh;
                 width: 100%;
+                h1 {
+                  line-height: 0;
+                }
               }
             }
           }
