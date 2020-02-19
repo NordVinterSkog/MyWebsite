@@ -14,6 +14,12 @@ class Project extends Component {
         title: "WeatherApp",
         description: "Simple weather app based on three APIs.",
         link: "https://nordvinterskog.github.io/WeatherApp/"
+      },
+      {
+        id: 2,
+        title: "OrcSoundboard",
+        description: "Soundboard of Peon from Polish version of Warcraft III.",
+        link: "https://nordvinterskog.github.io/OrcSoundboard/"
       }
     ]
   };
