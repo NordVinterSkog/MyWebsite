@@ -26,7 +26,7 @@ body {
       .overlay {
         background: rgba(0, 0, 0, 0.9);
         height: 100%;
-        animation: thunder 3s infinite;
+        animation: thunder 3s infinite, flash 1s;
       }
       h1 {
         position: absolute;
@@ -61,232 +61,253 @@ body {
           text-align: center;
           opacity: 1;
           animation: appear 5s;
+          animation-delay: 3s;
+          animation-fill-mode: backwards;
         }
         p:hover {
           letter-spacing: 0;
           color: white;
         }
       }
+      div:nth-of-type(1) p {
+        animation-delay: 1s;
+      }
     }
-    .page {
-      position: relative;
-      top: 0;
+    div:nth-of-type(2) p {
+      animation-delay: 2s;
+    }
+
+    div:nth-of-type(3) p {
+      animation-delay: 3s;
+    }
+  }
+  .page {
+    position: relative;
+    top: 0;
+    background-color: black;
+    margin-bottom: 0;
+    .up {
+      position: sticky;
+      top: 80vh;
+      left: 90vw;
+      border-radius: 50%;
+      font-size: 5vh;
+      border: 5px solid #888;
       background-color: black;
-      margin-bottom: 0;
-      .up {
-        position: sticky;
-        top: 80vh;
-        left: 90vw;
-        border-radius: 50%;
-        font-size: 5vh;
-        border: 5px solid #888;
-        background-color: black;
-        color: #888;
-        height: 10vh;
-        width: 10vh;
-        cursor: pointer;
-        transition: 0.3s;
-        z-index: 2;
-        animation: arrowpulse 2s infinite linear, arrowflip 0.3s reverse;
+      color: #888;
+      height: 10vh;
+      width: 10vh;
+      cursor: pointer;
+      transition: 0.3s;
+      z-index: 2;
+      animation: arrowpulse 2s infinite linear, arrowflip 0.3s reverse;
+    }
+    button:hover {
+      color: white;
+      font-size: 6vh;
+      border: 4px solid white;
+    }
+
+    //PROJECTS
+
+    .projects {
+      height: 100vh;
+      background-image: url(img/coding.jpg);
+      background-attachment: fixed;
+      margin: 15vh 0 0 0;
+      color: white;
+      background-size: cover;
+      background-attachment: fixed;
+      text-align: center;
+      font-size: 1.5vh;
+      .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        animation: thunder 5s infinite;
+        height: 100%;
       }
-      button:hover {
-        color: white;
-        font-size: 6vh;
-        border: 4px solid white;
+      .title {
+        animation: pulse 5s infinite linear;
+        font-size: 7vh;
+        text-align: left;
+        padding: 6vh;
+        margin: 0;
+        letter-spacing: 3px;
       }
+      .previews {
+        display: flex;
+        flex-direction: row;
+        overflow: auto;
+        .project {
+          flex: 1 0 auto;
+          width: 30vw;
+          margin: 2vh 2vw;
+          // background-color: red;
 
-      //PROJECTS
-
-      .projects {
-        height: 100vh;
-        background-image: url(img/coding.jpg);
-        background-attachment: fixed;
-        margin: 15vh 0;
-        color: white;
-        background-attachment: fixed;
-        text-align: center;
-        font-size: 1.5vh;
-        .overlay {
-          background: rgba(0, 0, 0, 0.9);
-          height: 100%;
-        }
-        .title {
-          animation: pulse 5s infinite linear;
-          font-size: 7vh;
-          text-align: left;
-          padding: 6vh;
-          margin: 0;
-          letter-spacing: 3px;
-        }
-        .previews {
-          display: flex;
-          flex-direction: row;
-          overflow: auto;
-          .project {
-            flex: 1 0 auto;
-            width: 30vw;
-            margin: 2vh 2vw;
-            // background-color: red;
-
-            .image {
-              margin: 0 auto;
-              height: 35vh;
-              width: 25vw;
-              border: 2px solid black;
-              border-radius: 1vw;
-              overflow: hidden;
-              position: relative;
-              background-color: black;
-              h1 {
-                font-size: 5vh;
-                letter-spacing: 3px;
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                padding: 1vw;
-                transition: 0.1s;
-                animation: none;
-                .fab {
-                  font-size: 0;
-                  transition: 0.1s;
-                  text-transform: uppercase;
-                }
-              }
-              a {
+          .image {
+            margin: 0 auto;
+            height: 35vh;
+            width: 25vw;
+            border: 2px solid black;
+            border-radius: 1vw;
+            overflow: hidden;
+            position: relative;
+            background-color: black;
+            h1 {
+              font-size: 5vh;
+              letter-spacing: 3px;
+              margin: 0;
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              text-align: center;
+              padding: 1vw;
+              transition: 0.1s;
+              animation: none;
+              .fab {
                 font-size: 0;
-              }
-              img {
-                height: 100%;
-                width: 100%;
                 transition: 0.1s;
-                opacity: 0.1;
+                text-transform: uppercase;
               }
             }
-            .image:hover {
-              img {
-                opacity: 0.4;
-              }
-              h1 {
-                font-size: 0;
-                .fab {
-                  font-size: 30vh;
-                }
-              }
+            a {
+              font-size: 0;
             }
-            p {
-              font-size: 2.5vh;
+            img {
+              height: 100%;
+              width: 100%;
+              transition: 0.1s;
+              opacity: 0.1;
             }
           }
+          .image:hover {
+            img {
+              opacity: 0.4;
+            }
+            h1 {
+              font-size: 0;
+              .fab {
+                font-size: 30vh;
+              }
+            }
+          }
+          p {
+            font-size: 2.5vh;
+          }
         }
-        .archive {
+      }
+      .archive {
+        color: white;
+        text-decoration: none;
+        transition: 0.3s;
+      }
+      .archive:hover {
+        color: olivedrab;
+        letter-spacing: 0;
+      }
+    }
+
+    .skills {
+      height: 100vh;
+      margin: 15vh 0;
+      background-image: url(img/skills.jpg);
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      position: relative;
+      color: white;
+      .overlay {
+        background: rgba(0, 0, 0, 0.6);
+        animation: thunder 2s infinite;
+        height: 100%;
+        // position: fixed;
+      }
+      h1 {
+        text-align: center;
+        font-size: 7vh;
+        padding: 3vh 20vw;
+      }
+      .pics {
+        // background-color: red;
+        height: 50%;
+        display: flex;
+        flex-shrink: 1;
+        flex-wrap: wrap;
+        justify-content: center;
+        img {
+          padding: 2vh;
+          animation: pulse 2s;
+          width: 12vw;
+        }
+      }
+    }
+
+    //CONTACT
+
+    .contact {
+      height: 100vh;
+      margin: 15vh 0;
+      background-image: url(img/aboutme.jpg);
+      background-attachment: fixed;
+      position: relative;
+      .overlay {
+        background: rgba(0, 0, 0, 0.9);
+        animation: thunder 4s infinite;
+        height: 100%;
+      }
+      .aboutme {
+        padding: 5vh 10vw;
+        left: 0;
+        position: absolute;
+
+        div {
+          font-size: 3.5vh;
+          margin-left: 25vw;
           color: white;
-          text-decoration: none;
+        }
+      }
+      .contactme {
+        width: 30vw;
+        height: 100vh;
+        position: relative;
+        img {
+          position: absolute;
+          top: 15vh;
+          left: 7.5vw;
+          height: 15vw;
+          width: 15vw;
+          border-radius: 50%;
+        }
+        .links {
+          display: flex;
+          flex-direction: column;
+          // height: 50%;
+          // background-color: red;
+          left: 0;
+          top: 50vh;
+          // transform: translate(-50%, -5%);
+          position: relative;
+        }
+        a {
+          // width: 50%;
+          margin: 0 auto;
+          padding: 1vw;
+          font-size: 8vw;
+          text-align: center;
+          line-height: 100%;
+          color: #888;
           transition: 0.3s;
         }
-        .archive:hover {
-          color: olivedrab;
-          letter-spacing: 0;
-        }
-      }
-
-      .skills {
-        height: 100vh;
-        margin: 15vh 0;
-        background-image: url(img/skills.jpg);
-        background-position: center;
-        background-attachment: fixed;
-        position: relative;
-        color: white;
-        .overlay {
-          background: rgba(0, 0, 0, 0.6);
-          height: 100%;
-          // position: fixed;
-        }
-        h1 {
-          text-align: center;
-          font-size: 7vh;
-          padding: 3vh 20vw;
-        }
-        .pics {
-          // background-color: red;
-          height: 50%;
-          display: flex;
-          flex-shrink: 1;
-          flex-wrap: wrap;
-          justify-content: center;
-          img {
-            padding: 2vh;
-            animation: pulse 2s;
-            width: 12vw;
-          }
-        }
-      }
-
-      //CONTACT
-
-      .contact {
-        height: 100vh;
-        margin: 15vh 0;
-        background-image: url(img/aboutme.jpg);
-        background-attachment: fixed;
-        position: relative;
-        .overlay {
-          background: rgba(0, 0, 0, 0.9);
-          animation: thunder 4s infinite;
-          height: 100%;
-        }
-        .aboutme {
-          padding: 5vh 10vw;
-          left: 0;
-          position: absolute;
-
-          div {
-            font-size: 3.5vh;
-            margin-left: 25vw;
-            color: white;
-          }
-        }
-        .contactme {
-          width: 30vw;
-          height: 100vh;
-          position: relative;
-          img {
-            position: absolute;
-            top: 15vh;
-            left: 7.5vw;
-            height: 15vw;
-            width: 15vw;
-            border-radius: 50%;
-          }
-          .links {
-            display: flex;
-            flex-direction: column;
-            // height: 50%;
-            // background-color: red;
-            left: 0;
-            top: 50vh;
-            // transform: translate(-50%, -5%);
-            position: relative;
-          }
-          a {
-            // width: 50%;
-            margin: 0 auto;
-            padding: 1vw;
-            font-size: 8vw;
-            text-align: center;
-            line-height: 100%;
-            color: #888;
-            transition: 0.3s;
-          }
-          a:hover {
-            color: white;
-          }
+        a:hover {
+          color: white;
         }
       }
     }
+  }
+  footer {
+    color: #888;
+    padding: 0.5vh;
+    background-color: transparent;
   }
 }
 
@@ -358,6 +379,15 @@ body {
     background: rgba(0, 0, 0, 0.9);
   }
   100% {
+    background: rgba(0, 0, 0, 0.9);
+  }
+}
+
+@keyframes flash {
+  from {
+    background: rgba(0, 0, 0, 1);
+  }
+  to {
     background: rgba(0, 0, 0, 0.9);
   }
 }

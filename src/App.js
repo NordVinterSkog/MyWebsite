@@ -25,7 +25,9 @@ class App extends Component {
           <Contact />
           <Skills />
           <Projects />
-          <footer id="footer"></footer>
+          <footer id="footer">
+            All pictures taken by me. Icons by FontAwesome.
+          </footer>
         </div>
       </div>
     );
