@@ -7,14 +7,14 @@ class Bar extends Component {
   render() {
     return (
       <div className="bar">
-        <ScrollIntoView selector="#blog" className="scrollButton">
-          <p>blog</p>
-        </ScrollIntoView>
-        <ScrollIntoView selector="#projects" className="scrollButton">
-          <p>projects</p>
-        </ScrollIntoView>
         <ScrollIntoView selector="#contact" className="scrollButton">
           <p>about me</p>
+        </ScrollIntoView>
+        <ScrollIntoView selector="#skills" className="scrollButton">
+          <p>skills</p>
+        </ScrollIntoView>{" "}
+        <ScrollIntoView selector="#projects" className="scrollButton">
+          <p>projects</p>
         </ScrollIntoView>
       </div>
     );

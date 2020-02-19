@@ -5,10 +5,11 @@ html {
   margin: 0;
   padding: 0;
   width: 100vw;
+  background-color: black;
 }
 body {
   box-sizing: border-box;
-  overflow: hidden;
+  overflow-x: hidden;
   font-family: "Noto Serif", serif;
   .wrapper {
     .header {
@@ -71,6 +72,7 @@ body {
       position: relative;
       top: 0;
       background-color: black;
+      margin-bottom: 0;
       .up {
         position: sticky;
         top: 80vh;
@@ -91,181 +93,6 @@ body {
         color: white;
         font-size: 6vh;
         border: 4px solid white;
-      }
-
-      //BLOG
-
-      .blog {
-        height: 100vh;
-        background-image: url(img/blog.jpg);
-        background-attachment: fixed;
-        margin: 15vh 0;
-        color: white;
-        text-align: center;
-        font-size: 1.5vh;
-        position: relative;
-        background-attachment: fixed;
-
-        .blogRoute {
-          position: absolute;
-          left: -100vh;
-          top: 0;
-          height: 100vh;
-        }
-
-        .singleArticle {
-          width: 100vw;
-          min-height: 100vh;
-          background-image: url(img/articles/0.jpg);
-          h1 {
-            text-align: left;
-            padding: 2vh;
-            font-size: 4vh;
-          }
-          .textarea {
-            width: 90%;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow: auto;
-            margin: 0 auto;
-            color: white;
-            border: none;
-            font-family: inherit;
-            height: 60vh;
-            font-size: 3.5vh;
-            letter-spacing: 1px;
-            text-align: left;
-            padding: 2vh;
-            animation: appear 1s;
-          }
-        }
-        .overlay {
-          background: rgba(0, 0, 0, 0.9);
-          height: 100%;
-        }
-        a {
-          text-decoration: none;
-          color: #888;
-          font-size: 4vh;
-        }
-        .articlesArchive {
-          padding: 5vh;
-          text-align: left;
-          font-size: 4vh;
-          .article a {
-            color: #888;
-            transition: 0.3s;
-            animation: appear 1s;
-          }
-          .article:hover a {
-            color: white;
-          }
-        }
-
-        .back {
-          position: absolute;
-          top: 80vh;
-          left: 90vw;
-          transition: 0.3s;
-          .up {
-            transform: rotate(270deg);
-            animation: arrowflip 0.3s;
-          }
-        }
-        .back:hover {
-          color: white;
-          letter-spacing: 0;
-        }
-
-        .title {
-          animation: pulse 5s infinite linear;
-          font-size: 7vh;
-          text-align: left;
-          padding: 4vh;
-          margin: 0;
-          letter-spacing: 3px;
-        }
-        .articles {
-          display: flex;
-          flex-direction: row-reverse;
-          .article {
-            width: 30vw;
-            margin: 2vh 2vw;
-            // background-color: red;
-
-            .image {
-              margin: 0 auto;
-              height: 35vh;
-              width: 25vw;
-              border: 2px solid black;
-              border-radius: 1vw;
-              overflow: hidden;
-              position: relative;
-              background-color: black;
-              h1 {
-                font-size: 5vh;
-                letter-spacing: 3px;
-                animation: none;
-                margin: 0;
-                position: absolute;
-                top: 50%;
-                left: 50%;
-                transform: translate(-50%, -50%);
-                text-align: center;
-                padding: 1vw;
-                transition: 0.1s;
-                p {
-                  font-size: 0;
-                  transition: 0.1s;
-                  text-transform: uppercase;
-                }
-              }
-              a {
-                margin: 0;
-              }
-              img {
-                height: 100%;
-                width: 100%;
-                transition: 0.1s;
-                opacity: 0.1;
-              }
-            }
-            .image:hover {
-              img {
-                height: 120%;
-                width: 120%;
-                opacity: 0.4;
-              }
-              h1 {
-                font-size: 0;
-                p {
-                  font-size: 9vh;
-                }
-              }
-            }
-            p {
-              font-size: 2.5vh;
-            }
-          }
-        }
-        .archive {
-          color: #888;
-          text-decoration: none;
-          transition: 0.3s;
-          padding: 3vh;
-          animation: pulse 5s infinite linear;
-          font-size: 7vh;
-          text-align: left;
-          padding: 4vh;
-          margin: 0;
-          letter-spacing: 3px;
-          position: absolute;
-          top: 75%;
-          left: 0;
-        }
-        .archive:hover {
-          color: white;
-          letter-spacing: 0;
-        }
       }
 
       //PROJECTS
@@ -365,6 +192,39 @@ body {
         }
       }
 
+      .skills {
+        height: 100vh;
+        margin: 15vh 0;
+        background-image: url(img/skills.jpg);
+        background-position: center;
+        background-attachment: fixed;
+        position: relative;
+        color: white;
+        .overlay {
+          background: rgba(0, 0, 0, 0.6);
+          height: 100%;
+          // position: fixed;
+        }
+        h1 {
+          text-align: center;
+          font-size: 7vh;
+          padding: 3vh 20vw;
+        }
+        .pics {
+          // background-color: red;
+          height: 50%;
+          display: flex;
+          flex-shrink: 1;
+          flex-wrap: wrap;
+          justify-content: center;
+          img {
+            padding: 2vh;
+            animation: pulse 2s;
+            width: 12vw;
+          }
+        }
+      }
+
       //CONTACT
 
       .contact {
@@ -375,6 +235,7 @@ body {
         position: relative;
         .overlay {
           background: rgba(0, 0, 0, 0.9);
+          animation: thunder 4s infinite;
           height: 100%;
         }
         .aboutme {
@@ -543,134 +404,24 @@ body {
           transform: translate(-50%, 0);
         }
 
-        //BLOG
-
-        .blog {
-          height: 100vh;
-          background-image: url(img/blog.jpg);
-          margin: 0;
-          text-align: center;
-          font-size: 1.5vh;
-          position: relative;
-          background-attachment: fixed;
-
-          .blogRoute {
-            position: absolute;
-            left: -100vh;
-            top: 0;
-            height: 100vh;
-          }
-
-          .singleArticle {
-            width: 100vw;
-            min-height: 100vh;
-            background-image: url(img/articles/0.jpg);
-            h1 {
-              text-align: center;
-              padding: 2vh;
-              font-size: 4vh;
-            }
-            .textarea {
-              font-size: 3vh;
-            }
-          }
-
-          a {
-            text-decoration: none;
-            color: #888;
+        .skills {
+          h1 {
+            text-align: center;
             font-size: 4vh;
+            padding: 3vh 10vw;
           }
-          .articlesArchive {
-            padding: 5vh;
-            text-align: center;
-            .article a {
-              color: #888;
-              font-size: 4vh;
-              transition: 0.3s;
-              animation: appear 1s;
-            }
-            .article:hover a {
-              color: white;
-            }
-          }
-
-          .back {
-            position: absolute;
-            top: 85vh;
-            left: 50vw;
-            transform: translate(-50%, 0);
-            z-index: 4;
-          }
-
-          .title {
-            animation: none;
-            font-size: 3vh;
-            text-align: center;
-          }
-          .articles {
+          .pics {
+            // background-color: red;
+            height: 50%;
             display: flex;
-            flex-direction: column-reverse;
-            .article {
-              width: 80vw;
-              margin: 2vh auto;
-
-              .image {
-                margin: 0 auto;
-                height: 15vh;
-                width: 100%;
-                border: 2px solid black;
-                background-color: black;
-                h1 {
-                  font-size: 2vh;
-                  letter-spacing: 3px;
-                  animation: none;
-                  margin: 0;
-                  position: absolute;
-                  top: 50%;
-                  left: 50%;
-                  transform: translate(-50%, -50%);
-                  text-align: center;
-                  padding: 1vw;
-                  transition: 0.1s;
-                  h1 {
-                    font-size: 0;
-                    transition: 0.1s;
-                    text-transform: uppercase;
-                  }
-                }
-                a {
-                  margin: 0;
-                }
-                img {
-                  height: 100%;
-                  width: 100%;
-                  transition: 0.1s;
-                  opacity: 0.3;
-                }
-              }
-              .image:hover {
-                h1 {
-                  h1 {
-                    font-size: 0;
-                  }
-                }
-              }
-              p {
-                font-size: 0;
-              }
+            flex-shrink: 2;
+            flex-wrap: wrap;
+            justify-content: center;
+            img {
+              padding: 2vh;
+              animation: pulse 2s;
+              width: 22vw;
             }
-          }
-          .archive {
-            animation: none;
-            font-size: 5vh;
-            text-align: center;
-            padding: 4vh;
-            margin: 0 auto;
-            letter-spacing: 3px;
-            position: absolute;
-            top: 70%;
-            left: 50%;
-            transform: translate(-50%, 0);
           }
         }
 
