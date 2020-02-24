@@ -19,7 +19,7 @@ class App extends Component {
         <div className="page">
           <button className="up">
             <ScrollIntoView selector="#header">
-              <i class="fas fa-arrow-up active"></i>
+              <i className="fas fa-arrow-up active"></i>
             </ScrollIntoView>
           </button>
           <Contact />

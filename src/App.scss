@@ -135,65 +135,44 @@ body {
       }
       .previews {
         display: flex;
-        flex-direction: row;
+        flex-direction: column;
         overflow: auto;
+        text-align: center;
         .project {
           flex: 1 0 auto;
-          width: 30vw;
+          width: 90%;
           margin: 2vh 2vw;
           // background-color: red;
 
-          .image {
-            margin: 0 auto;
-            height: 35vh;
-            width: 25vw;
-            border: 2px solid black;
-            border-radius: 1vw;
-            overflow: hidden;
-            position: relative;
-            background-color: black;
-            h1 {
-              font-size: 5vh;
-              letter-spacing: 3px;
-              margin: 0;
-              position: absolute;
-              top: 50%;
-              left: 50%;
-              transform: translate(-50%, -50%);
-              text-align: center;
-              padding: 1vw;
-              transition: 0.1s;
-              animation: none;
-              .fab {
-                font-size: 0;
-                transition: 0.1s;
-                text-transform: uppercase;
-              }
-            }
-            a {
-              font-size: 0;
-            }
-            img {
-              height: 100%;
-              width: 100%;
-              transition: 0.1s;
-              opacity: 0.1;
-            }
+          a {
+            text-decoration: none;
+            margin: 0;
           }
-          .image:hover {
-            img {
-              opacity: 0.4;
-            }
-            h1 {
-              font-size: 0;
-              .fab {
-                font-size: 30vh;
-              }
-            }
+          .title {
+            font-size: 5vh;
+            animation: none;
+            padding: 0;
+            color: #888;
+            will-change: color;
+            margin: 0;
+            text-align: center;
+            transition: 1s;
           }
-          p {
-            font-size: 2.5vh;
+
+          .description {
+            opacity: 0;
+            color: white;
+            font-size: 3vh;
+            padding: 0;
+            margin: 0;
+            transition: 1s;
           }
+        }
+        .project:hover .title {
+          color: white;
+        }
+        .project:hover .description {
+          opacity: 1;
         }
       }
       .archive {

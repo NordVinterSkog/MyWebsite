@@ -20,6 +20,13 @@ class Project extends Component {
         title: "OrcSoundboard",
         description: "Soundboard of Peon from Polish version of Warcraft III.",
         link: "https://nordvinterskog.github.io/OrcSoundboard/"
+      },
+      {
+        id: 3,
+        title: "IcelandicSchool",
+        description:
+          "Signup screen for fake Icelandic school, with language selection.",
+        link: "https://nordvinterskog.github.io/IcelandicSchool/"
       }
     ]
   };
@@ -27,22 +34,10 @@ class Project extends Component {
     let projects = this.state.projects;
     let previews = projects.map(project => (
       <div className="project" key={project.id}>
-        <div className="image">
-          <h1 className="title">
-            {project.title}
-
-            <i className="fab fa-github"></i>
-          </h1>
-          <a href={project.link}>
-            {" "}
-            <img
-              alt={project.title}
-              src={require(`../img/projects/${project.id}.jpg`)}
-            />
-          </a>
-        </div>
-
-        <p>{project.description}</p>
+        <a href={project.link}>
+          <h1 className="title">{project.title}</h1>
+          <p className="description">{project.description}</p>
+        </a>
       </div>
     ));
     return (
