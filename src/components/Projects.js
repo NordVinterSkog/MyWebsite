@@ -44,7 +44,6 @@ class Project extends Component {
       <>
         <div className="projects" id="projects">
           <div className="overlay">
-            <h1 className="title">projects</h1>
             <div className="previews">{previews}</div>{" "}
           </div>
         </div>
